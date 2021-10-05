@@ -1,16 +1,21 @@
 
+from typing import Sized
 import requests
 
 
 def main():
     print('###Retorno de informações de CEP###')
-
-    cep_input = input('Digite o cep com 8 dígitos sem letras e traços! ')
-
-    if len(cep_input) != 8:
-        print('Quantidade de dígitos inválidos')
-        exit()
-
+    valida_cep = False
+    repetidor = 's'    
+    while valida_cep == False:
+        cep_input = input('Digite o cep com 8 dígitos sem letras e traços! ')
+        try:
+            cep_input=int(cep_input)                            
+            
+            valida_cep=True    
+        except:
+            print("Formato do CEP inválido, tente novamente.", cep_input)
+    
     request = requests.get(
         'https://viacep.com.br/ws/{}/json/'.format(cep_input))
 
