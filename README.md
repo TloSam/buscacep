@@ -12,5 +12,5 @@ Caso escolha a opção que retorna todos os dados a resposta virá como JSON <i>
 
 ### Bugs:
 
-Script não possui tratamento quando inserido dado que não é inteiro na variável que só recebe inteiro.
+~Script não possui tratamento quando inserido dado que não é inteiro na variável que só recebe inteiro.~
 
